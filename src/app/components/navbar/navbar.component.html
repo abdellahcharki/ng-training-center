@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg  ">
+    <div class="container-fluid">
+
+        
+        <div class="logo">
+            <img src="/assets/images/logo.png" class="h-100" alt="">
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <a class="link"  routerLink="" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a class="link" routerLink="hr"  routerLinkActive="active">
+                <i class="fas fa-users"></i>
+                <span>GRH</span>
+            </a>
+
+
+            <a class="link" routerLink="academy" routerLinkActive="active" >
+                <i class="fas fa-sticky-note"></i>
+                <span>Académie</span>
+            </a>
+
+            <a class="link" routerLink="academy" routerLinkActive="active" >
+                <i class="fas fa-dollar-sign"></i>
+                <!-- <img width="30" src="assets/images/icons8-money-bag-48.png" alt="" srcset=""> -->
+                <span>Finances</span>
+            </a>
+
+            <a class="link" routerLink="e" routerLinkActive="active" >
+                <i class="fas fa-globe"></i>
+                <span>Website</span>
+            </a>
+
+            <a class="link" routerLinkActive="active">
+                <i class="fas fa-cogs"></i>
+                <span>Paramter</span>
+            </a>
+
+            
+
+        </div>
+
+
+        <div class="">
+ 
+    
+            <div ngbDropdown> 
+                
+                <div  ngbDropdownToggle  class="user-info" type="button" id="triggerId" data-toggle="dropdown">
+                    <img src="assets/images/profile.JPG" alt="">
+                    <div class="usernam">
+                        <p>Abdellah Charki</p>
+                        <span>12.13.2022</span>
+                    </div>
+                </div>
+                <div ngbDropdownMenu>
+                    <button  ngbDropdownItem class=" " ><i class="fas mx-2 fa-user"></i> profile </button>
+                    <button  ngbDropdownItem class=" " ><i class="fas mx-2 fa-power-off"></i> Log out</button>
+                </div>
+
+                
+            </div>
+
+
+        </div>
+    </div>
+</nav>

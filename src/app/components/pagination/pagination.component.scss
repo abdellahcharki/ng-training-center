@@ -1,0 +1,31 @@
+.pagination{ 
+    margin-top: 17px;
+    
+    .page-item{
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        background: rgba(0, 0, 0, 0);
+        border: none;
+        margin-left: 1px;
+        border-radius: 6px;
+        &.dotes{
+            color: #000;
+            font-weight: 600; 
+        }
+        &:hover{
+            background-color: #f7f7f7;
+            &.dotes{
+                background-color: transparent;
+            }
+        }
+        
+        &.active{
+            background: #a490a5;
+          
+            color: rgb(255, 255, 255);
+            
+        }
+    }
+
+}

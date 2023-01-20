@@ -1,0 +1,92 @@
+<div class="row card-container card">
+    <div class="card-header col-12">
+        
+        <a routerLink="add" class="btn-action"><i class="fas fa-plus"></i></a>
+     
+        <div  ngbDropdown class="d-inline">
+            <button class="btn-action" ngbDropdownToggle > <i class="fas fa-file-export    "></i> Exporte </button>
+            <div ngbDropdownMenu>
+                <button  ngbDropdownItem  ><i class="fas fa-file-pdf"></i> PDF</button>
+                <button  ngbDropdownItem  ><i class="fas fa-file-excel"></i> Excel</button>
+                <button  ngbDropdownItem  > <i class="fas fa-file-csv"></i> CSV </button>
+             </div>
+        </div>
+
+
+        <div  ngbDropdown class="d-inline">
+            <button class="btn-action" ngbDropdownToggle > <i class="fas fa-list"></i> line aficher : {{size}} </button>
+            <div ngbDropdownMenu>
+                <button (click)="updatePageSize(10)"  ngbDropdownItem  >10</button>
+                <button (click)="updatePageSize(15)" ngbDropdownItem   >15</button>
+                <button (click)="updatePageSize(20)"  ngbDropdownItem   >20</button>
+                <button (click)="updatePageSize(30)"  ngbDropdownItem   >30</button>
+                <button (click)="updatePageSize(50)"  ngbDropdownItem   >50</button>
+             </div>
+        </div>
+
+        <div  ngbDropdown class="d-inline">
+            <button class="btn-action" ngbDropdownToggle > <i class="fas fa-sort"></i> Trier par : {{sort=="lastName"?'Nom':'Id' }} </button>
+            <div ngbDropdownMenu>
+                <button (click)="updateSort('id')"  ngbDropdownItem >ID</button>
+                <button  (click)="updateSort('lastName')" ngbDropdownItem >Nome</button> 
+             </div>
+        </div>
+
+
+
+
+ 
+        <div class="search-form">
+            <input #q (keyup)="onSearch(q.value)" placeholder="search ..." type="text">
+            <button (click)="q.value='';onSearch(q.value)"><i class="fas fa-times"></i></button>
+        </div>
+
+
+
+    </div>
+    <div class="col-12 card-body">
+ 
+         
+            
+             <app-no-data  *ngIf="teachers.length==0" [data]="true"></app-no-data>
+        
+
+        <table *ngIf="teachers.length" class="table  ">
+            <thead class="border-top-0">
+            <tr>
+                <th class="border-top-0">N.</th>
+                <th class="border-top-0">Nome et Prenome</th>
+                <th class="border-top-0">CNI</th>
+                <th class="border-top-0">Telephone</th>
+                <th class="border-top-0">E-mail</th>
+                <th class="border-top-0">Sex</th>
+                <th class="border-top-0">No. Groups</th>
+            </tr>
+            </thead>
+            <tbody>
+
+             
+            
+            <tr *ngFor="let t of teachers">
+                <td scope="row">{{t.id}}</td>
+                <td><a><strong>{{ t.lastName +" "+ t.firstName }}</strong></a></td>
+                <td>{{t.cni}}</td>
+                <td>{{t.tele}}</td>
+                <td>{{t.email}}</td>
+                <td>{{t.sex}}</td>
+                <td>4</td>
+            </tr>
+
+            </tbody>
+    </table>
+
+
+    
+    <div class="d-inline-block justify-content-sm-around align-content-center d-flex">
+        <app-pagination [page]="page" [numberOfPages]="numberOfPages" (onPageChanged)="updatePage($event)" > </app-pagination>
+      </div>
+  
+
+</div>
+
+</div>

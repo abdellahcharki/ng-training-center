@@ -1,0 +1,9 @@
+
+
+
+<div *ngIf="numberOfPages>1" class="d-inline-block justify-content-sm-around align-content-center d-flex">
+    <div class="pagination" >
+        <button  *ngFor="let p of pages" (click)="updatePage(p)"  [ngClass]="{'active':p==page,'dotes':p=='...'}" [disabled]="p==page || p=='...'" class="page-item ">{{p!="..."?p+1:'...'}}</button>
+    </div>
+
+</div>

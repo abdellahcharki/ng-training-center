@@ -1,0 +1,83 @@
+ 
+
+<div class="row card-container card">
+    <div class="card-header col-12">
+        <a routerLink="add"  class="btn-action"><i class="fas fa-plus"></i></a>
+        <div  ngbDropdown class="d-inline">
+            <button class="btn-action" ngbDropdownToggle > <i class="fas fa-file-export    "></i> Exporte </button>
+            <div ngbDropdownMenu>
+                <button  ngbDropdownItem  ><i class="fas fa-file-pdf"></i> PDF</button>
+                <button  ngbDropdownItem  ><i class="fas fa-file-excel"></i> Excel</button>
+                <button  ngbDropdownItem  > <i class="fas fa-file-csv"></i> CSV </button>
+             </div>
+        </div>
+
+
+        <div  ngbDropdown class="d-inline">
+            <button class="btn-action" ngbDropdownToggle > <i class="far fa-calendar"></i> Anne: 2022 </button>
+            <div ngbDropdownMenu>
+                <button  ngbDropdownItem  >2022</button>
+                <button  ngbDropdownItem  >2021</button>
+                <button  ngbDropdownItem  >2020</button>
+                <button  ngbDropdownItem  >2019</button>
+            </div>
+        </div>
+
+
+        <div  ngbDropdown class="d-inline">
+            <button class="btn-action" ngbDropdownToggle > <i class="fas fa-soap"></i> Statu: Encoure </button>
+            <div ngbDropdownMenu>
+                <button  ngbDropdownItem  >Tout</button>
+                <button  ngbDropdownItem  >Encoure</button>
+                <button  ngbDropdownItem  >En Attant</button>
+                <button  ngbDropdownItem  >Finer</button>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <div class="col-12 card-body">
+
+        <table class=" table">
+            <thead >
+                <tr>
+                    <th class="border-top-0">N.</th>
+                    <th class="border-top-0">Group</th> 
+                    <th class="border-top-0">Teacher</th>
+                    <th class="border-top-0">N. eleves</th>
+                    <th class="border-top-0">Etat</th>
+                 </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let day of [1,2,3,4,5,6,7,8]">
+                    <td>{{day}}</td>
+                    <td>Group {{day}}</td> 
+                    <td>Ossama ziani</td>
+                    <td>20</td>
+                    <td><span class="badge badge-info">En attant</span></td>
+                    <td> 
+                        <button class="bg-transparent border-0 mr-1"><i class="fas fa-edit"></i> edit </button>
+                        |
+                        <button class="bg-transparent border-0 ml-1"><i class="fas fa-trash"></i> suprimer </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <div class="d-inline-block justify-content-sm-between align-content-center d-flex">
+
+     
+        </div>
+
+
+    </div>
+
+</div>

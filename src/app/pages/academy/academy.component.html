@@ -1,0 +1,34 @@
+<div class="sub-navbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 nav-menu-intro">
+                <!-- <p class="title-nav-menu">Users</p>  -->
+            </div>
+            <nav class="navbar navigation-links col-12 navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" routerLink="/acadmy" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{ exact: true }"><i class="fas fa-home"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" routerLink="cours" routerLinkActive="active">Cours</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" routerLink="groups" routerLinkActive="active">Groups</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" routerLink="teachers" routerLinkActive="active">Emploit</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-2">
+    <router-outlet></router-outlet>
+</div>

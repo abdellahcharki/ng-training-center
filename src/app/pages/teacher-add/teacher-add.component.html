@@ -1,0 +1,48 @@
+
+<div class="row">
+    <p class="top-title">Ajoute un Enseignants </p>
+</div>
+
+
+
+<div   class="row card-container card">
+     
+    <div class="card-header col-12 header-stiper">
+        <div class="steper">
+
+            <div *ngFor="let s of steps"  [class.active]="s.active" class="step">
+                <span *ngIf="!s.valid" class="step-icon"> {{s.id}} </span>
+                <span *ngIf="s.valid" class="step-icon"><i class="fas fa-check"></i></span>
+                <span class="step-label">{{s.label}}</span>
+            </div>
+
+        </div>
+
+    </div>
+  
+<!-- ================================ First Section ================================ -->
+
+
+ 
+
+
+
+    <div  class="col-12 card-body " >
+        <div class="card   m-card ">
+     
+            <div class="card-body">
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aliquam, nulla error, quos similique, deserunt sequi aut magnam quaerat vel temporibus nostrum sunt. Eos voluptatum magnam placeat cum nulla ullam?
+            </div>
+
+        </div>
+    </div>
+
+
+
+    
+
+ 
+ 
+
+</div>

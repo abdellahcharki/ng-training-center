@@ -1,0 +1,204 @@
+
+<div class="row">
+    <p class="top-title">Ajoute un Eleve </p>
+</div>
+
+
+
+<div   class="row card-container card">
+     
+    <div class="card-header col-12 header-stiper">
+        <div class="steper">
+
+
+            <div *ngFor="let s of steps"  [class.active]="s.active" class="step">
+                <span *ngIf="!s.valid" class="step-icon"> {{s.id}} </span>
+                <span *ngIf="s.valid" class="step-icon"><i class="fas fa-check    "></i></span>
+                <span class="step-label">{{s.label}}</span>
+            </div>
+
+        </div>
+
+    </div>
+  
+<!-- ================================ First Section ================================ -->
+
+
+ 
+
+
+
+    <div *ngIf="step==1"  class="col-12 card-body " >
+        <div class="row">
+           
+                <div class="card   m-card ">
+     
+                
+
+                    <div class="card-body">
+
+                        <form [formGroup]="eleveInfo"  class="row">
+    
+                            <div  [class.err]="!firstName.valid && firstName.dirty" class="form-group err col-3">
+                                <label for="">Nom*</label>
+                                <input formControlName="firstName"  type="text"  class="form-control" placeholder="nom et prenome" >
+                                <small class="err-txt">* ce chomp est ruqet</small>
+                            </div>        
+                            
+                            <div  class="form-group col-3">
+                                <label for="">Prenom *</label>
+                                <input formControlName="lastName" type="text"  class="form-control" placeholder="nom et prenome" >
+                                <small class="err-txt">* </small>
+                             </div>
+         
+         
+        
+                            <div class="form-group col-6">
+                                <label for="">Date de nicance *</label>
+                                <input formControlName="date" type="date" name="bdate"  id="" class="form-control" placeholder="" >
+                                <small class="err-txt">* </small>
+                            </div>
+        
+        
+        
+                   
+                            <div class="form-group col-6">
+                                <label for="">Sex *</label>
+                                <select formControlName="sex" class="form-control" name="sex" id="">
+                                    <option value="0"   >----- chizer -----</option>
+                                    <option value="F">F</option>
+                                    <option value="M">M</option>
+                                </select>
+                                <small class="err-txt">* ce chomp est ruqet</small>
+                             </div>
+
+
+                            <div class="form-group col-6">
+                                <label for="">CNI</label>
+                                <input formControlName="cni" type="text" name="cni" id="" class="form-control" placeholder="AB010101" >
+                                <small class="err-txt">* ce chomp est ruqet</small>
+                            </div>
+        
+                            <div class="form-group col-6">
+                                <label for="">E-mail *</label>
+                                <input formControlName="email" type="text" name="mail" id="" class="form-control" placeholder="exempl@mail.com" >
+                                <small class="err-txt">* ce chomp est ruqet</small>
+                            </div>
+
+                            <div class="form-group col-6">
+                                <label for="">Telephone *</label>
+                                <input  formControlName="tele" type="text"  name="tele" id="" class="form-control" placeholder="0601020304" >
+                                <small class="err-txt">* ce chomp est ruqet</small>
+                            </div>
+        
+                    
+                            <div class="form-group col-12">
+                                <label for="">Address *</label>
+                                <input  formControlName="address" type="text"  name="address" id="" class="form-control" placeholder="address" >
+                                <small class="err-txt">* ce chomp est ruqet</small>
+                            </div>
+
+
+                        </form>
+                    
+                    </div>
+        
+                </div>
+           
+        </div>
+    </div>
+
+
+
+    
+
+    <div *ngIf="step==2"   class="col-12   ">
+        <form class="card m-card">
+            <div class="card-body">
+                <form class="row">
+
+                    <div class="form-group col-12">
+                        <label for="">Group*</label>
+                        <select class="form-control" name="cour" id="">
+                            <option value="1">Group 1 -------------- B1 --------------</option>
+                            <option value="2">Group 2 ( B2 )</option>
+                            <option value="3">Group 3 ( B2 )</option>
+                            <option value="4">Group 4 ( B2 )</option>
+                            <option value="5">Group 5 ( B2 )</option>
+                            <option value="6">Group 6 ( B2 )</option>
+                            <option value="7">Group 7 ( B2 )</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group col-6">
+                        <label for="">Frait d'inscription (en DHs) *</label>
+                        <input   type="text" class="form-control" name="" id=""  placeholder="">
+                    </div>
+                    
+           
+             
+                    
+                    <div class="form-group col-6">
+                        <label for="">prixe par mois (en DHs) *</label>
+                        <input type="text" class="form-control" name="" id=""  placeholder="">
+                    </div>
+                
+         
+
+                    <ul class="list-info col-12">
+                        <li> <label for="">Group:</label> <span>----------------------</span></li>
+                        <li> <label for="">Enseignants:</label> <span>----------------------</span></li>
+                    </ul>
+                </form>
+            
+            </div>
+
+        </form>
+    </div>
+
+    <div *ngIf="step==3"  class="col-12">
+        <div class="card   m-card ">
+            <div class="card-body">
+                <div class="row">
+
+                    <div class="col-3 mt-4 ">Name:</div>
+                    <div class="col-9 mt-4">abdellah charki</div>
+                    
+
+                    <div class="col-3  mt-4 ">Date de naicance</div>
+                    <div class="col-9 mt-4">31/10/1997</div>
+                    
+
+                    <div class="col-3  mt-4 ">CNI:</div>
+                    <div class="col-9 mt-4">ZT457274</div>
+                    
+
+                    <div class="col-3  mt-4 ">E-mail</div>
+                    <div class="col-9 mt-4">abdellah.charki@gmail.com</div>
+                    
+
+                    <div class="col-3  mt-4 ">Telephone:</div>
+                    <div class="col-9 mt-4">0682334130</div>
+                    
+
+                    <div class="col-3  mt-4 ">Addrice:</div>
+                    <div class="col-9 mt-4">hay old ben tayeb , karia ba mohamed</div>
+                    
+                    <div class="col-12"><hr></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      
+    <div class="col-12 my-2">
+        <button *ngIf="step!=steps.length" (click)="next()" class="btn btn-action btn-gery float-right">Suivant</button>
+        <button *ngIf="step==steps.length"  (click)="next()" class="btn btn-action btn-gery float-right">Confirmer</button>
+        <button  (click)="prev()" *ngIf="step!=1"   class="btn btn-action mr-1 float-right">back</button>
+    </div>
+
+
+</div>

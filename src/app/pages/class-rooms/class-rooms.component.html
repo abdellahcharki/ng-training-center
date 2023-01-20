@@ -1,0 +1,86 @@
+
+    
+
+<div class="card card-container row mt-2">
+    <div class="card-header col-12">
+
+    <button   class="btn-action"><i class="fas fa-plus"></i></button>
+
+        <div  ngbDropdown class="d-inline">
+            <button class="btn-action" ngbDropdownToggle > <i class="fas fa-file-export    "></i> Exporte </button>
+            <div ngbDropdownMenu>
+                <button  ngbDropdownItem  ><i class="fas fa-file-pdf"></i> PDF</button>
+                <button  ngbDropdownItem  ><i class="fas fa-file-excel"></i> Excel</button>
+                <button  ngbDropdownItem  > <i class="fas fa-file-csv"></i> CSV </button>
+             </div>
+        </div>
+ 
+
+        <div class="search-form">
+            <input #q   placeholder="search ..." type="text">
+            <button  ><i class="fas fa-times"></i></button>
+        </div>
+
+  
+    </div>
+ 
+    <div class="col-12 card-body">
+
+ 
+<app-no-data *ngIf="classRooms.length==0"></app-no-data>
+
+        <table  *ngIf="classRooms.length" class="table">
+            <thead class="">
+                <tr>
+                    <th class="border-top-0">N.</th>
+                    <th class="room border-top-0">label</th>
+                    <th class="border-top-0">option</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let cr of classRooms" >
+                    <td>{{cr.id}}</td>
+                    <td class="room">{{cr.room}}</td>
+                    <td> 
+                        <button class="bg-transparent border-0 mr-1"><i class="fas fa-edit"></i> edit </button>
+                        |
+                        <button class="bg-transparent border-0 ml-1"><i class="fas fa-trash"></i> suprimer </button>
+                        |
+                        <button class="bg-transparent border-0 ml-1"><i class="fas fa-calendar"></i> planing </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <div class="d-inline-block justify-content-sm-between align-content-center d-flex">
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

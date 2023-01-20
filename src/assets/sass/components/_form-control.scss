@@ -1,0 +1,27 @@
+.form-group{
+
+.err-txt{
+    display: none;
+}
+    &.err{
+        color: red;
+        .form-control{
+            border-color: red;
+        }
+        .err-txt{
+            display: inline-block;
+            color: red;
+            font-size: 14px;
+            padding-left: 10px;
+        
+        }
+    }
+
+    .form-control{
+        padding: 17px 1em;
+        border-radius: 6px !important;
+        height: 54px;
+    }
+
+
+}

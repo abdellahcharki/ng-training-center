@@ -1,0 +1,35 @@
+.sub-navbar{
+    background-color: #fff; 
+    
+    border-bottom: 1px solid #e4e5e7;
+
+    .title-nav-menu{
+        padding: 10px 0px 4px 1em;
+        font-size: 26px;
+        margin: 0;
+    }
+    .navbar.navigation-links{
+        position: unset;
+        box-shadow: none;
+        background: #fff;
+        padding: 0;
+        height: unset;
+        z-index: unset;
+        border-bottom: none;
+        .navbar-nav{
+            .nav-item{
+                .nav-link{
+                    padding: 15px 20px;
+                    border-bottom: 3px solid transparent;
+                    color: #202124b3;
+                    font-size: 14px;
+                    &.active{
+                        border-color:$color_2;
+                        color: $color_2;
+                    }
+                }
+            }
+            
+        }
+    }
+}
